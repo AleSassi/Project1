@@ -15,6 +15,7 @@ git checkout idCommit		Undoes all the changes locally to the specified commit id
 git config --global user.email "your_email@public.com"		Sets up the user public email
 git checkout -b branchName	Creates a new Branch locally
 git push origin branchName	Uploads the commit to the specified branch, either master or the new one
+git push origine branch_name --force
 */
 
 import Foundation
