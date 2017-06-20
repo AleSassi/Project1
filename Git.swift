@@ -21,47 +21,47 @@ import Foundation
 
 class GitCommands {
 
-func pullCommit(){
-print("git pull")
-}
+  func pullCommit(){
+    print("git pull")
+  }
+  
+  func pushCommit(fromBranch branch: String){
+    print("git push origin \(branch)")
+  }
 
-func pushCommit(fromBranch branch: String){
-print("git push origin \(branch)")
-}
+  func commit(withMessage commitMessage: String){
+    print("git commit -m \(commitMessage)")
+  }
+  
+  func getStatus() -> String {
+    print("git status")
+    return "This function gets the status of the current Git repo"
+  }
+  
+  func cloneRepo() {
+    print("git clone")
+  }
+  
+  func addFilesToGitRepo(all: Bool) {
+    var addingOption: String!
+    if all{
+      addingOption = "*"
+    } else {
+      addingOption = "."
+    }
+    print("git add \(addingOption)")
+  }
+  
+  func revert(toCommit idCommit: String, toBranch branch: String){
+    if idCommit != nil {
+      print("git checkout \(idCommit)")
+    } else if idCommit == nil && branch != nil {
+      print("git checkout -b \(branch)"
+    }
+  }
 
-func commit(withMessage commitMessage: String){
-print("git commit -m \(commitMessage)")
-}
-
-func getStatus() -> String {
-print("git status")
-return "This function gets the status of the current Git repo"
-}
-
-func cloneRepo() {
-print("git clone")
-}
-
-func addFilesToGitRepo(all: Bool) {
-var addingOption: String!
-if all{
-addingOption = "*"
-} else {
-addingOption = "."
-}
-print("git add \(addingOption)")
-}
-
-func revert(toCommit idCommit: String, toBranch branch: String){
-if idCommit != nil{
-print("git checkout \(idCommit)")
-} else if idCommit == nil && branch != nil {
-print("git checkout -b \(branch)"
-}
-}
-
-func configGit(withUserEmail email: String){
-print("git config --global user.email \(email)")
-}
+  func configGit(withUserEmail email: String){
+    print("git config --global user.email \(email)")
+  }
 
 }
