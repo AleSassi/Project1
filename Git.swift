@@ -18,7 +18,7 @@ git push origin branchName	Uploads the commit to the specified branch, either ma
 */
 
 import Foundation
-//Trying to generate a conflict, hope it will!
+// Here we have a complete new comment
 class GitCommands {
 
   func pullCommit(){
@@ -53,10 +53,10 @@ class GitCommands {
   }
   
   func revert(toCommit idCommit: String, toBranch branch: String){
-    if idCommit != nil {
+    if idCommit != "" {
       print("git checkout \(idCommit)")
-    } else if idCommit == nil && branch != nil {
-      print("git checkout -b \(branch)"
+    } else if idCommit == "" && branch != "" {
+      print("git checkout -b \(branch)")
     }
   }
 
