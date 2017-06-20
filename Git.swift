@@ -18,7 +18,7 @@ git push origin branchName	Uploads the commit to the specified branch, either ma
 */
 
 import Foundation
-
+//Please always provide docu for your objects
 class GitCommands {
 
   func pullCommit(){
