@@ -19,7 +19,7 @@ git push origine branch_name --force
 */
 
 import Foundation
-//Please always provide docu for your objects
+// Here we have a complete new comment
 class GitCommands {
 
   func pullCommit(){
