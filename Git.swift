@@ -53,10 +53,10 @@ class GitCommands {
   }
   
   func revert(toCommit idCommit: String, toBranch branch: String){
-    if idCommit != nil {
+    if idCommit != "" {
       print("git checkout \(idCommit)")
-    } else if idCommit == nil && branch != nil {
-      print("git checkout -b \(branch)"
+    } else if idCommit == "" && branch != "" {
+      print("git checkout -b \(branch)")
     }
   }
 
